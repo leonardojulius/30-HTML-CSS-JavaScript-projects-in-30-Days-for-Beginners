@@ -9,12 +9,12 @@ body {
     background-color: #333;
     font-family: "Segoe UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-:root{
-    --light-c : #ddd;
-    --dark-c: #111;
-    --text-shadow:5px 2px 2px rgba(0, 0, 0, 0.8);
-}
 
+:root {
+    --light-c: #ddd;
+    --dark-c:#111;
+    --text-shadow:5px 2px 2px rgba(0, 0,0,0.8);
+}
 h1{
     color: orange;
     margin: 4rem 0;
@@ -23,11 +23,12 @@ h1{
 
 h1 span{
     background-color: var(--dark-c);
-    color: var(--light-c);
+    color:var(--light-c);
     padding: 0.2rem 1rem;
 }
-label{
-    color: var(--light-c);
+
+label {
+    color: var(--light-c)
 }
 
 .container{
@@ -35,15 +36,16 @@ label{
     width: 350px;
     height: 350px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat( 3, 1fr);
     gap: 10px;
-    box-shadow:  0 0 10px 2px rgba(0, 0, 0, 0.8);
+    box-shadow:  0 0 10px 2px rgba(0, 0,0,0.8);
 }
-.element{
+
+.element {
     width: 100px;
     height: 100px;
     border: 1px solid var(--dark-c);
-    box-shadow: 0 0 10px 2px  rgba(0,0,0, 0.8);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,7 +54,7 @@ label{
     border-radius: 5px;
 }
 
-.element:hover{
+.element:hover {
     cursor: pointer;
     box-shadow: inset 0 0 100px 5px var(--dark-c);
 }

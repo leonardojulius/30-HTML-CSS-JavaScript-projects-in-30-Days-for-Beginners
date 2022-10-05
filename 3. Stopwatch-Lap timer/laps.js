@@ -17,7 +17,34 @@ window.onload=function(){
      startBtn.onclick = function (){
         clearInterval(Interval)
         Interval = setInterval(startTimer, 10);
+        dimEffect();
      };
+
+     // Reset Button
+
+     resetBtn.onclick = function (){
+        clearInterval(Interval);
+        minutesSet = "00";
+        secondsSet = "00";
+        tensSet = "00";
+        tens.innerHTML =  tensSet;
+        seconds.innerHTML = secondsSet;
+        minutes.innerHTML = minutesSet;
+    
+        document.getElementById("laps").innerHTML = "";
+     }
+
+stopBtn.onclick = function() {
+    clearInterval(Interval);
+  
+
+
+    const lap = document.getElementById("laps");
+    const li = document.createElement('li');
+    li.innerHTML=`lap: <span>${minutes.innerHTML}:${seconds.innerHTML}.${tens.innerHTML}</span>,`
+    lap.appendChild(li);
+    dimEffect();
+}
 
  // Create Start Timer function
  
@@ -52,4 +79,13 @@ window.onload=function(){
         minutes.innerHTML = minutesSet;
     }
 
-}  }
+}
+
+//Dimming Effect Function
+
+function dimEffect() {
+    const lapTime = document.querySelector(".lap-time");
+    lapTime.classList.toggle("dimming-effect");
+}
+
+}

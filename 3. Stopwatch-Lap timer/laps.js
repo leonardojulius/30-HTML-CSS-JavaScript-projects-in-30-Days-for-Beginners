@@ -23,25 +23,26 @@ window.onload=function(){
  
  function startTimer(){
     tensSet++;
-    // console.log(tens++);
+    
 
     if(tensSet<9){
-        tens.innerHTML = "0" + tens;
+        tens.innerHTML = "0" + tensSet;
     }
 
-    if(tensSet>9) tens.innerHTML = tensSet;
-    }
+    if(tensSet > 9) tens.innerHTML = tensSet;
+  
 
-    if(tensSet>99){
-        secondsSet ++;
+    if(tensSet > 99){
+        secondsSet++;
         seconds.innerHTML="0" + secondsSet;
         tensSet = 0;
         tens.innerHTML = "0" + 0;
     }
 
     if(secondsSet>9) {
-        seconds.innerHTML = secondsSet
+        seconds.innerHTML = secondsSet;
     }
+
     if(secondsSet == 60){
         minutesSet++;
         minutes.innerHTML = "0" + minutesSet;
@@ -51,4 +52,4 @@ window.onload=function(){
         minutes.innerHTML = minutesSet;
     }
 
-}
+}  }

@@ -45,4 +45,9 @@ body {
     text-align: center;
     border-bottom: 2px solid #ddd;
     font-size: 3rem;
+    color: #fff;
+}
+
+small {
+    font-size: 50px;
 }

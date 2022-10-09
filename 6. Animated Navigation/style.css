@@ -37,8 +37,18 @@ text-shadow: 2px 1px 1px #333;
     color: #fff;
 
 }
+.nav-container {
+    position:relative;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+}
 
 .nav-container .logo{
+    transition-delay: 0.45s;
 
 }
 
@@ -93,6 +103,7 @@ text-shadow: 2px 1px 1px #333;
 }
 .main-nav-list::after {
     right: 0;
+
 }
 
 .main-nav-list ul {

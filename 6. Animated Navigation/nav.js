@@ -7,6 +7,10 @@ menuToggle.addEventListener('click', function(){
         activeElements[active].classList.toggle("active");
     }
 
+  //  console.log(menuToggle.childNodes[1]);
+
+    const navBtnIcon = menuToggle.childNodes[1];
+    navBtnIcon.classList.toggle("fa-times");
 
 
 });

@@ -20,17 +20,21 @@ body {
    font-family: 'Hachi Maru Pop', cursive;
 
 }
+ 
 .container {
-    position:relative;
+    position: relative;
     top: 40%;
     margin: auto;
-    max-width: 700px;
-    font-size: 3.8rem;
+    max-width: 600px;
+    font-size: 3.3rem;
 }
 
-@media(min-width:1024px){
-    .container{
-        max-width: 1400px;
-        font-size: 3rem;
-    }
+@media (min-width:1024px){
+   .container{
+    position: relative;
+    top: 40%;
+    margin: auto;
+    max-width: 600px;
+    font-size: 3.3rem;
+   }
 }

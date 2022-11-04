@@ -45,3 +45,9 @@ i.far.fa-eye{
 .alert-message {
     visibility: hidden;
 } 
+.form-field.error input {
+    border-color: red;
+}
+.form-field.success input {
+    border-color: greenyellow;
+}

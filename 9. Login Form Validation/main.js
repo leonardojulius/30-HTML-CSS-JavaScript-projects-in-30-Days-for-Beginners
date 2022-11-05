@@ -41,34 +41,50 @@ function submitValidation (event) {
   if(loginUsername.value === "" || loginUsername.value.length < 3){
    // console.log("empty");
 
-   //showError(loginUsername,"User name can not be empty & must be > 3");
+   showError(loginUsername,"User name can not be empty & must be > 3");
 
   }else{
    // console.log("not empty");
- //  showSuccess();
+    showSuccess(loginUsername);
   }
 
 
   if(loginPassword.value === "" || loginPassword.value.length <  6) {
 
    //console.log(" empty");
-    showError();
+    showError(loginPassword,"Password cannot be empty or less than 6");
   } else {
     //console.log("not empty");
 
-  //  showSuccess();
+   showSuccess(loginPassword);
   }
 }
 
-
+// Show error Message 
 function showError(input,message) {
-const formField = input.parentElement;
-//console.log(formField.className);
+  
+  const formField = input.parentElement;
 
-formField.className ="form-field error";
+ // console.log(formField.className);
 
- if((formField.className="form-field error")) {
-    const alert_message =formField.querySelector(".alert-message");
+ formField.className = "form-field error";
+
+ if((formField.className ="form-field error")){
+    const alert_message = formField.querySelector(".alert-message");
     alert_message.style.visibility = "visible";
- }
+    alert_message.style.color = "red";
+    alert_message.innerText = message;
+  }
+
+}
+
+
+function showSuccess(input){
+  const formField = input.parentElement;
+  formField.className ='form-field success'
+  if(formField.className = "form-field success") {
+    const alert_message = formField.querySelector(".alert-message");
+    alert_message.style.visibility = "hidden";
+
+  }
 }
